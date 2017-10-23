@@ -5,7 +5,7 @@ export class LicenseDisc {
         public c: string,
         public d: string,
         public controlNumber: string,
-        public regisrationNumber: string,
+        public registrationNumber: string,
         public registerNumber: string,
         public type: string,
         public make: string,

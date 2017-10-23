@@ -26,7 +26,7 @@ export class LicenseDiscRepository extends BaseRepository implements ILicenseDis
             hash: licenseDisc.hash,
             make: licenseDisc.make,
             model: licenseDisc.model,
-            regisrationNumber: licenseDisc.regisrationNumber,
+            registrationNumber: licenseDisc.registrationNumber,
             registerNumber: licenseDisc.registerNumber,
             timestamp: licenseDisc.timestamp,
             type: licenseDisc.type,

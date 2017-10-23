@@ -43,7 +43,7 @@ export class BaseRepository {
             },
             expiryDate: {
                 allowNull: false,
-                type: Sequelize.NUMBER,
+                type: Sequelize.NUMERIC,
             },
             hash: {
                 allowNull: false,
@@ -57,7 +57,7 @@ export class BaseRepository {
                 allowNull: false,
                 type: Sequelize.STRING,
             },
-            regisrationNumber: {
+            registrationNumber: {
                 allowNull: false,
                 type: Sequelize.STRING,
             },
@@ -67,7 +67,7 @@ export class BaseRepository {
             },
             timestamp: {
                 allowNull: false,
-                type: Sequelize.NUMBER,
+                type: Sequelize.NUMERIC,
             },
             type: {
                 allowNull: false,
