@@ -13,10 +13,10 @@ export class LicenseDisc {
         public color: string,
         public vinNumber: string,
         public engineNumber: string,
-        public expiryDate: Number,
+        public expiryDate: number,
         public hash: string,
-        public timestamp: Number,
-        public deviceId: string, 
+        public timestamp: number,
+        public deviceId: string,
     ) {
 
     }

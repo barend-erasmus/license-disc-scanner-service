@@ -57,11 +57,11 @@ export class BaseRepository {
                 allowNull: false,
                 type: Sequelize.STRING,
             },
-            registrationNumber: {
+            registerNumber: {
                 allowNull: false,
                 type: Sequelize.STRING,
             },
-            registerNumber: {
+            registrationNumber: {
                 allowNull: false,
                 type: Sequelize.STRING,
             },
@@ -80,7 +80,7 @@ export class BaseRepository {
         });
 
         this.models = {
-            LicenseDisc
+            LicenseDisc,
         };
     }
 

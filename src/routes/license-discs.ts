@@ -14,28 +14,41 @@ import { LicenseDisc } from './../entities/license-disc';
 export class LicenseDiscsRouter {
 
     public static async create(req: express.Request, res: express.Response) {
-        console.log(req.body);
-        // const licenseDisc: LicenseDisc = await LicenseDiscsRouter.getLicenseDiscService().create(
-        //     req.body.a,
-        //     req.body.b,
-        //     req.body.c,
-        //     req.body.controlNumber,
-        //     req.body.controlNumber,
-        //     req.body.d,
-        //     req.body.deviceId,
-        //     req.body.engineNumber,
-        //     req.body.expiryDate,
-        //     req.body.hash,
-        //     req.body.make,
-        //     req.body.model,
-        //     req.body.registrationNumber,
-        //     req.body.registerNumber,
-        //     req.body.timestamp,
-        //     req.body.type,
-        //     req.body.vinNumber   
-        // );
 
-        res.json('OK');
+        let failedCount = 0;
+
+        for (const item of req.body) {
+
+            try {
+                const licenseDisc: LicenseDisc = await LicenseDiscsRouter.getLicenseDiscService().create(
+                    item.a,
+                    item.b,
+                    item.c,
+                    item.controlNumber,
+                    item.controlNumber,
+                    item.d,
+                    item.deviceId,
+                    item.engineNumber,
+                    item.expiryDate,
+                    item.hash,
+                    item.make,
+                    item.model,
+                    item.registrationNumber,
+                    item.registerNumber,
+                    item.timestamp,
+                    item.type,
+                    item.vinNumber,
+                );
+
+            } catch (err) {
+                failedCount++;
+            }
+
+        }
+
+        res.json({
+            failedCount,
+        });
     }
 
     protected static getLicenseDiscService(): LicenseDiscService {

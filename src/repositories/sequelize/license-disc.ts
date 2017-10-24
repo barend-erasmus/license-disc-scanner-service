@@ -26,8 +26,8 @@ export class LicenseDiscRepository extends BaseRepository implements ILicenseDis
             hash: licenseDisc.hash,
             make: licenseDisc.make,
             model: licenseDisc.model,
-            registrationNumber: licenseDisc.registrationNumber,
             registerNumber: licenseDisc.registerNumber,
+            registrationNumber: licenseDisc.registrationNumber,
             timestamp: licenseDisc.timestamp,
             type: licenseDisc.type,
             vinNumber: licenseDisc.vinNumber,
@@ -39,7 +39,7 @@ export class LicenseDiscRepository extends BaseRepository implements ILicenseDis
     public async find(hash: string): Promise<LicenseDisc> {
         const licenseDisc: any = await BaseRepository.models.LicenseDisc.find({
             where: {
-                hash
+                hash,
             },
         });
 
@@ -48,23 +48,23 @@ export class LicenseDiscRepository extends BaseRepository implements ILicenseDis
         }
 
         return new LicenseDisc(
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
-            null,
+            licenseDisc.a,
+            licenseDisc.b,
+            licenseDisc.c,
+            licenseDisc.d,
+            licenseDisc.controlNumber,
+            licenseDisc.registrationNumber,
+            licenseDisc.registerNumber,
+            licenseDisc.type,
+            licenseDisc.make,
+            licenseDisc.model,
+            licenseDisc.color,
+            licenseDisc.vinNumber,
+            licenseDisc.engineNumber,
+            licenseDisc.expiryDate,
+            licenseDisc.hash,
+            licenseDisc.timestamp,
+            licenseDisc.deviceId,
         );
     }
 }
