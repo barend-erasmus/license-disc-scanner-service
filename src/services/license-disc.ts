@@ -39,7 +39,7 @@ export class LicenseDiscService {
 
         let licenseDisc: LicenseDisc = await this.licenseDiscRepository.find(hash);
 
-        if (!licenseDisc) {
+        if (licenseDisc) {
             throw new Error("License Disc already exists.");
         }
 

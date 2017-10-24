@@ -14,7 +14,7 @@
         "mkdir /logs",
         "npm --prefix /opt/license-disc-scanner-service install",
         "pm2 stop license-disc-scanner-service",
-        "pm2 start /opt/license-disc-scanner-service/src/app.js --name license-disc-scanner-service -- --prod --port 9011",
+        "pm2 start /opt/license-disc-scanner-service/src/app.js --name license-disc-scanner-service -- --prod --port 9012",
         "sudo service nginx reload"
     ],
     "directories": [

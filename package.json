@@ -10,7 +10,7 @@
     "docs": "apidoc -i src/ -o apidoc/ -t ./template",
     "lint": "tslint ./src/**/*.ts --exclude ./src/**/*.d.ts",
     "sync": "tsc & node ./src/sync.js",
-    "deploy": "tsc & apidoc -i src/ -o apidoc/ & istanbul cover node_modules/mocha/bin/_mocha --root ./src ./src/**/*.test.js & ssh-deployer -f deploy.json --host developersworkspace.co.za --username username --password password --workspace ./"
+    "deploy": "tsc & apidoc -i src/ -o apidoc/ & istanbul cover node_modules/mocha/bin/_mocha --root ./src ./src/**/*.test.js & ssh-deployer -f deploy.json --host 178.62.108.12 --username username --password password --workspace ./"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "moment": "^2.19.1",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.16.0",

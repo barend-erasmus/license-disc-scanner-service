@@ -1,6 +1,7 @@
 // Imports
 import * as express from 'express';
 import { config } from './../config';
+import * as moment from 'moment';
 
 // Imports repositories
 import { LicenseDiscRepository } from './../repositories/sequelize/license-disc';
@@ -29,13 +30,13 @@ export class LicenseDiscsRouter {
                     item.d,
                     item.deviceId,
                     item.engineNumber,
-                    item.expiryDate,
+                    moment(item.expiryDate).toDate().getTime(),
                     item.hash,
                     item.make,
                     item.model,
                     item.registrationNumber,
                     item.registerNumber,
-                    item.timestamp,
+                    moment(item.timestamp).toDate().getTime(),
                     item.type,
                     item.vinNumber,
                 );
