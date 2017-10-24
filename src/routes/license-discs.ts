@@ -1,7 +1,7 @@
 // Imports
 import * as express from 'express';
-import { config } from './../config';
 import * as moment from 'moment';
+import { config } from './../config';
 
 // Imports repositories
 import { LicenseDiscRepository } from './../repositories/sequelize/license-disc';
