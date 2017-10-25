@@ -25,7 +25,7 @@ export class LicenseDiscsRouter {
                     item.a,
                     item.b,
                     item.c,
-                    item.controlNumber,
+                    item.color,
                     item.controlNumber,
                     item.d,
                     item.deviceId,
