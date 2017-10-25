@@ -17,6 +17,12 @@ export class LicenseDiscService {
         return this.licenseDiscRepository.find(hash);
     }
 
+    public async listHashes(): Promise<string[]> {
+        const result: LicenseDisc[] = await this.licenseDiscRepository.list();
+
+        return result.map((x) => x.hash);
+    }
+
     public async create(
         a: string,
         b: string,

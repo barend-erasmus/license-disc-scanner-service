@@ -15,6 +15,10 @@ export class LicenseDiscRepository implements ILicenseDiscRepository {
         return true;
     }
 
+    public async list(): Promise<LicenseDisc[]> {
+        return this.licenseDiscs;
+    }
+
     public async find(hash: string): Promise<LicenseDisc> {
         return this.licenseDiscs.find((x) => x.hash === hash);
     }

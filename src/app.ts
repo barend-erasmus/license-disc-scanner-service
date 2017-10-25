@@ -36,6 +36,7 @@ app.use(bodyParser.json());
 // });
 
 app.post('/licenseDiscs/create', LicenseDiscsRouter.create);
+app.get('/licenseDiscs/listHashes', LicenseDiscsRouter.listHashes);
 
 app.listen(argv.port || 3000, () => {
     console.log(`listening on port ${argv.port || 3000}`);

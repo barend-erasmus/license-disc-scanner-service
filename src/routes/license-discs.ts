@@ -52,6 +52,13 @@ export class LicenseDiscsRouter {
         });
     }
 
+    public static async listHashes(req: express.Request, res: express.Response) {
+
+        const result: string[] = await LicenseDiscsRouter.getLicenseDiscService().listHashes();
+
+        res.json(result);
+    }
+
     protected static getLicenseDiscService(): LicenseDiscService {
 
         const licenseDiscRepository: LicenseDiscRepository = new LicenseDiscRepository(config.database.host, config.database.username, config.database.password);

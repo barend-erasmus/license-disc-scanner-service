@@ -67,4 +67,28 @@ export class LicenseDiscRepository extends BaseRepository implements ILicenseDis
             licenseDisc.deviceId,
         );
     }
+
+    public async list(): Promise<LicenseDisc[]> {
+        const licenseDiscs: any[] = await BaseRepository.models.LicenseDisc.findAll({});
+
+        return licenseDiscs.map((licenseDisc) => new LicenseDisc(
+            licenseDisc.a,
+            licenseDisc.b,
+            licenseDisc.c,
+            licenseDisc.d,
+            licenseDisc.controlNumber,
+            licenseDisc.registrationNumber,
+            licenseDisc.registerNumber,
+            licenseDisc.type,
+            licenseDisc.make,
+            licenseDisc.model,
+            licenseDisc.color,
+            licenseDisc.vinNumber,
+            licenseDisc.engineNumber,
+            licenseDisc.expiryDate,
+            licenseDisc.hash,
+            licenseDisc.timestamp,
+            licenseDisc.deviceId,
+        ));
+    }
 }

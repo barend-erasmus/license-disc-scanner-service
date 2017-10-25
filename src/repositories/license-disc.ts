@@ -6,4 +6,6 @@ export interface ILicenseDiscRepository {
     create(licenseDisc: LicenseDisc): Promise<boolean>;
 
     find(hash: string): Promise<LicenseDisc>;
+
+    list(): Promise<LicenseDisc[]>;
 }
